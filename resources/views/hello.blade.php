@@ -16,7 +16,7 @@
             width: 100%;
             display: table;
             font-weight: 100;
-            font-family: 'Lato';
+            font-family:  serif;
         }
 
         .container {
@@ -38,7 +38,12 @@
 <body>
     <div class="container">
         <div class="content">
-            <div class="title">Laravel1</div>
+            @forelse ($data as $element)
+            <p>{{ $element->ten_truyen}}</p>
+            <img src="{{$element->link_image}}" alt="" height="100px" width="100px">
+            @empty
+            {{-- empty expr --}}
+            @endforelse
         </div>
     </div>
 </body>

@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello/{name}/{age}', 'ControllerHello@hello');
+Route::get('/hello', 'ControllerHello@hello2');
+Route::get('/hello', 'ControllerHello@hello2');
+Route::get('/readbook', 'ReadBook@index');
+Route::get('/danhsachtruyen','ReadBook@getAllTruyen');	
+Route::get('home','ReadBook@getAllTruyen');	
+Route::get('home/add','ReadBook@insert');	
